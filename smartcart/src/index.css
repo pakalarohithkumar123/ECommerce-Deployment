@@ -1,0 +1,402 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7ff, #eef2ff);
+  color: #1f2937;
+  min-height: 100vh;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+  height: 70px;
+  background: linear-gradient(135deg, #111827, #1e293b);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+nav h1,
+nav .logo {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav button,
+nav a {
+  border: none;
+  text-decoration: none;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+nav button:hover,
+nav a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(37, 99, 235, 0.35);
+}
+
+/* =========================
+   MAIN PAGE
+========================= */
+
+main,
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+h1 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+h2 {
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #111827;
+}
+
+/* =========================
+   AUTH CARD
+========================= */
+
+form {
+  width: 100%;
+}
+
+form label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #374151;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 15px;
+  outline: none;
+  transition: 0.25s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+form button,
+button[type="submit"] {
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form button:hover,
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* =========================
+   SIGN IN / SIGN UP CARDS
+========================= */
+
+.auth-container,
+.signup-container,
+.signin-container {
+  width: 430px;
+  max-width: 92%;
+  margin: 70px auto;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.12),
+    0 4px 15px rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.auth-container h1,
+.signup-container h1,
+.signin-container h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.auth-container p,
+.signup-container p,
+.signin-container p {
+  text-align: center;
+  color: #6b7280;
+  margin: 10px 0 20px;
+}
+
+/* =========================
+   AUTH LINKS
+========================= */
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e5e7eb;
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #f8fafc;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  color: #6b7280;
+  margin: 6px 0;
+}
+
+.product-card .price {
+  color: #2563eb;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.product-card button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-card button:hover {
+  background: #1d4ed8;
+}
+
+/* =========================
+   SHOPPING CART
+========================= */
+
+.cart {
+  background: white;
+  padding: 28px;
+  margin-top: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+.cart h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item button {
+  border: none;
+  background: #ef4444;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.cart-item button:hover {
+  background: #dc2626;
+}
+
+/* =========================
+   CHECKOUT
+========================= */
+
+.checkout {
+  background: white;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+.checkout h2 {
+  color: #111827;
+  font-size: 26px;
+}
+
+.order-total {
+  margin-top: 20px;
+  padding: 15px;
+  background: #eff6ff;
+  border-radius: 9px;
+  color: #1e40af;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.loading {
+  text-align: center;
+  margin: 50px;
+  font-size: 18px;
+  color: #64748b;
+}
+
+/* =========================
+   SUCCESS / ERROR
+========================= */
+
+.success {
+  background: #dcfce7;
+  color: #166534;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.error {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  nav {
+    padding: 0 15px;
+  }
+
+  nav h1,
+  nav .logo {
+    font-size: 20px;
+  }
+
+  nav button,
+  nav a {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .auth-container,
+  .signup-container,
+  .signin-container {
+    margin: 35px auto;
+    padding: 25px;
+  }
+
+  main,
+  .container {
+    width: 94%;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+}
